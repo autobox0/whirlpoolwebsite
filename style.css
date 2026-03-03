@@ -1,144 +1,87 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Courier Prime', monospace;
-  background: linear-gradient(135deg, #001a4d 0%, #003d99 25%, #0052cc 50%, #003d99 75%, #001a4d 100%);
-  background-size: 400% 400%;
-  animation: poolFlow 15s ease infinite;
-  color: #ffffff;
-  line-height: 1.8;
-  min-height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', 'Trebuchet MS', cursive;
+    background: linear-gradient(135deg, #00ffff, #000066);
+    color: white;
+    text-align: center;
 }
 
-@keyframes poolFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Retro water ripple effect overlay */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-main {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-content {
-  background: rgba(255, 255, 255, 0.95);
-  color: #001a4d;
-  padding: 50px;
-  border: 5px solid #0052cc;
-  box-shadow: 0 0 20px rgba(0, 82, 204, 0.5), inset 0 0 20px rgba(0, 82, 204, 0.2);
-  max-width: 800px;
-  position: relative;
-}
-
-/* Retro 90s chunky border effect */
-.hero-content::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
-  background: #0052cc;
-  z-index: -1;
-}
-
-.hero-content::after {
-  content: '';
-  position: absolute;
-  top: -12px;
-  left: -12px;
-  right: -12px;
-  bottom: -12px;
-  border: 2px dashed #0052cc;
-  z-index: -2;
+header {
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    padding: 20px;
+    border-bottom: 5px ridge yellow;
 }
 
 h1 {
-  font-size: 56px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #0052cc;
-  letter-spacing: 3px;
-  text-shadow: 2px 2px 4px rgba(0, 82, 204, 0.3);
-  text-transform: uppercase;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px hotpink;
 }
 
-.hero-content > p:first-of-type {
-  font-size: 20px;
-  color: #003d99;
-  margin-bottom: 35px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.tagline {
+    font-style: italic;
+    margin-bottom: 15px;
 }
 
-.info {
-  margin-top: 30px;
+nav a {
+    color: yellow;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-.info p {
-  font-size: 15px;
-  color: #1a1a1a;
-  margin-bottom: 20px;
-  line-height: 1.8;
-  font-family: 'Courier Prime', monospace;
+nav a:hover {
+    text-decoration: underline;
+    color: hotpink;
 }
 
-.info p:first-child {
-  border-top: 3px solid #0052cc;
-  padding-top: 20px;
+.hero {
+    padding: 40px 20px;
 }
 
-/* Retro button-like hover effect */
-.hero-content:hover {
-  box-shadow: 0 0 30px rgba(0, 82, 204, 0.8), inset 0 0 30px rgba(0, 82, 204, 0.3);
+.cta {
+    background: hotpink;
+    color: white;
+    border: 3px outset yellow;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .hero-content {
+.cta:hover {
+    background: yellow;
+    color: black;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 30px;
-    border: 4px solid #0052cc;
-  }
+}
 
-  h1 {
-    font-size: 36px;
-    letter-spacing: 2px;
-  }
+.card {
+    background: rgba(0, 0, 102, 0.8);
+    border: 4px groove cyan;
+    padding: 20px;
+    width: 250px;
+}
 
-  .hero-content > p:first-of-type {
-    font-size: 16px;
-  }
+footer {
+    background: black;
+    padding: 15px;
+    border-top: 5px ridge yellow;
+    margin-top: 40px;
+}
 
-  .info p {
-    font-size: 14px;
-  }
+.map-placeholder {
+    width: 80%;
+    height: 400px;
+    margin: 40px auto;
+    border: 5px dashed cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: rgba(0,0,0,0.6);
 }
